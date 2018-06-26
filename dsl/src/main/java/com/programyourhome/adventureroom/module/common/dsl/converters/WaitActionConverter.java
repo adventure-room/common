@@ -3,10 +3,10 @@ package com.programyourhome.adventureroom.module.common.dsl.converters;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
-import com.programyourhome.adventureroom.common.model.WaitAction;
 import com.programyourhome.adventureroom.dsl.regex.MatchResult;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.Adventure;
+import com.programyourhome.adventureroom.module.common.model.WaitAction;
 
 public class WaitActionConverter implements RegexActionConverter<WaitAction> {
 
