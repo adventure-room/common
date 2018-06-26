@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.common.model;
+package com.programyourhome.adventureroom.module.common.model;
 
 import java.time.Duration;
 

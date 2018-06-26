@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.common.module;
+package com.programyourhome.adventureroom.module.common.module;
 
 import com.programyourhome.adventureroom.model.module.ModuleConfig;
 

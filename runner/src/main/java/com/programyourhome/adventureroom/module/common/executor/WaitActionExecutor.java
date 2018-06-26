@@ -1,6 +1,6 @@
-package com.programyourhome.adventureroom.common.executor;
+package com.programyourhome.adventureroom.module.common.executor;
 
-import com.programyourhome.adventureroom.common.model.WaitAction;
+import com.programyourhome.adventureroom.module.common.model.WaitAction;
 import com.programyourhome.iotadventure.runner.action.executor.ActionExecutor;
 import com.programyourhome.iotadventure.runner.context.ExecutionContext;
 

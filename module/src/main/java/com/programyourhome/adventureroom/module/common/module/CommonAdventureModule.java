@@ -1,11 +1,11 @@
-package com.programyourhome.adventureroom.common.module;
+package com.programyourhome.adventureroom.module.common.module;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-import com.programyourhome.adventureroom.common.dsl.converters.WaitActionConverter;
 import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModule;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
+import com.programyourhome.adventureroom.module.common.dsl.converters.WaitActionConverter;
 
 public class CommonAdventureModule extends AbstractRegexDslAdventureModule {
 

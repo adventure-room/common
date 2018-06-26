@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.common.dsl.converters;
+package com.programyourhome.adventureroom.module.common.dsl.converters;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
