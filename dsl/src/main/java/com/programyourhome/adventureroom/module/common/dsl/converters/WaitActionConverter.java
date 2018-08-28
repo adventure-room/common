@@ -2,6 +2,7 @@ package com.programyourhome.adventureroom.module.common.dsl.converters;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
+import java.util.Map;
 
 import com.programyourhome.adventureroom.dsl.regex.MatchResult;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
@@ -11,8 +12,8 @@ import com.programyourhome.adventureroom.module.common.model.WaitAction;
 public class WaitActionConverter implements RegexActionConverter<WaitAction> {
 
     @Override
-    public String getRegexLine() {
-        return "wait " + INTEGER + " " + NAME;
+    public Map<String, String> getRegexMap() {
+        return this.createRegexes(DEFAULT, "(wait|sleep) " + INTEGER + " " + NAME);
     }
 
     @Override
