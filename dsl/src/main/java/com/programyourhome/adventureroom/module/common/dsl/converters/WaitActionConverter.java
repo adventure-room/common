@@ -1,7 +1,5 @@
 package com.programyourhome.adventureroom.module.common.dsl.converters;
 
-import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 import java.util.Map;
 
 import com.programyourhome.adventureroom.dsl.regex.MatchResult;
@@ -13,16 +11,13 @@ public class WaitActionConverter implements RegexActionConverter<WaitAction> {
 
     @Override
     public Map<String, String> getRegexMap() {
-        return this.createRegexes(DEFAULT, "(wait|sleep) " + INTEGER + " " + NAME);
+        return this.createRegexes(DEFAULT, "(wait|sleep) " + DURATION);
     }
 
     @Override
     public WaitAction convert(MatchResult matchResult, Adventure adventure) {
         WaitAction action = new WaitAction();
-        String temporalTypeString = matchResult.getValue(NAME);
-        ChronoUnit chronoUnit = ChronoUnit.valueOf(temporalTypeString.toUpperCase());
-        long amount = Long.parseLong(matchResult.getValue(INTEGER));
-        action.duration = Duration.of(amount, chronoUnit);
+        action.duration = this.parseDuration(matchResult.getValue(DURATION));
         return action;
     }
 
