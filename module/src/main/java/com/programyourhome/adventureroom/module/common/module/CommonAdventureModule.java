@@ -6,6 +6,7 @@ import java.util.Collection;
 import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModule;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.Adventure;
+import com.programyourhome.adventureroom.model.execution.ExecutionContext;
 import com.programyourhome.adventureroom.module.common.dsl.converters.WaitActionConverter;
 
 public class CommonAdventureModule extends AbstractRegexDslAdventureModule {
@@ -26,7 +27,7 @@ public class CommonAdventureModule extends AbstractRegexDslAdventureModule {
     }
 
     @Override
-    public void start(Adventure adventure) {
+    public void start(Adventure adventure, ExecutionContext context) {
         // No start actions needed.
     }
 
@@ -41,7 +42,7 @@ public class CommonAdventureModule extends AbstractRegexDslAdventureModule {
     }
 
     @Override
-    public void stop(Adventure adventure) {
+    public void stop(Adventure adventure, ExecutionContext context) {
         // Nothing to do here.
     }
 
