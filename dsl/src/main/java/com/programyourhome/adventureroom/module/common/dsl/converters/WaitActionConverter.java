@@ -11,7 +11,7 @@ public class WaitActionConverter implements RegexActionConverter<WaitAction> {
 
     @Override
     public Map<String, String> getRegexMap() {
-        return this.createRegexes(DEFAULT, this.either("wait", "sleep") + DURATION);
+        return this.createRegexes(DEFAULT, this.either("wait", "sleep") + " " + DURATION);
     }
 
     @Override
