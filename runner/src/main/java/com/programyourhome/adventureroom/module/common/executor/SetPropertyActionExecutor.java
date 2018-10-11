@@ -17,4 +17,9 @@ public class SetPropertyActionExecutor implements ActionExecutor<SetPropertyActi
         context.setPropertyValue(action.name, convertedValue);
     }
 
+    @Override
+    public void stop() {
+        // Since the execute is non-blocking and non time consuming, there is no need for an explicit stop implementation.
+    }
+
 }
