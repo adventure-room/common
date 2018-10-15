@@ -19,7 +19,7 @@ public class WaitActionExecutor implements ActionExecutor<WaitAction> {
     }
 
     @Override
-    public void stop() {
+    public void stop(ExecutionContext context) {
         this.shouldStop = true;
     }
 

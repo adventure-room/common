@@ -18,7 +18,7 @@ public class SetPropertyActionExecutor implements ActionExecutor<SetPropertyActi
     }
 
     @Override
-    public void stop() {
+    public void stop(ExecutionContext context) {
         // Since the execute is non-blocking and non time consuming, there is no need for an explicit stop implementation.
     }
 

@@ -12,7 +12,7 @@ public class DebugPrintActionExecutor implements ActionExecutor<DebugPrintAction
     }
 
     @Override
-    public void stop() {
+    public void stop(ExecutionContext context) {
         // Printing is instant, so no stop needed.
     }
 

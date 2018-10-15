@@ -14,7 +14,7 @@ public class StartScriptActionExecutor implements ActionExecutor<StartScriptActi
     }
 
     @Override
-    public void stop() {
+    public void stop(ExecutionContext context) {
         // Script is started async, so no stop implementation needed.
     }
 
