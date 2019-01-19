@@ -9,8 +9,11 @@ public class StartScriptActionExecutor implements ActionExecutor<StartScriptActi
 
     @Override
     public void execute(StartScriptAction action, ExecutionContext context) {
-        Adventure adventure = context.getAdventure();
-        context.getToolbox().getAdventureService().startScript(adventure, adventure.getScript(action.scriptName));
+        // Always start a new script async.
+        new Thread(() -> {
+            Adventure adventure = context.getAdventure();
+            context.getToolbox().getAdventureService().startScript(adventure, adventure.getScript(action.scriptName));
+        }).start();
     }
 
     @Override
